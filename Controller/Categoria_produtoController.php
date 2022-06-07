@@ -9,7 +9,7 @@ class Categoria_produtoController
         $model = new Categoria_produtoModel();
         $model->getAllRows();
        
-       include 'View/modules/Categoria_produto/ListaDeCategorias.php';
+       include 'View/modules/Categoria_produto/ListaCategoriaProduto.php';
     }
 
     public static function form()
@@ -30,7 +30,8 @@ class Categoria_produtoController
         include 'Model/Categoria_produtoModel.php'; 
 
         $categoria_produto = new Categoria_produtoModel();
-        $categoria_produto->nome = $_POST['nome'];
+        $categoria_produto-> id = $_POST['id'];
+        $categoria_produto-> nome = $_POST['nome'];
 
 
         $categoria_produto->save();  // chamando o método save da model.
@@ -38,4 +39,11 @@ class Categoria_produtoController
         header("Location: /categorias"); // redirecionando o usuário para outra rota.
     }
 
+    public static function delete() {
+        include 'Model/Categoria_produtoModel.php';
+    
+        $model= new Categoria_produtoModel;
+        $model-> delete( (int) $_GET['id']);
+    
+        }
 }

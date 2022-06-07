@@ -12,9 +12,12 @@
 <body>
     <form action="/categoria/save" method="post">
         <fieldset>
+            
+            <input name="id" value= "<?= $model-> id ?>" type="hidden">
+            
             <legend>Cadastro de Categ</legend>
             <label for="nome">Nome:</label>
-            <input name="nome" id="nome" type="text" />
+            <input name="nome" value= "<?= $model-> nome?>" id="nome" type="text" />
 
             <button type="submit">Enviar</button>
 

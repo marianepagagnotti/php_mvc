@@ -16,7 +16,7 @@ class FuncionarioController
     {
         include 'Model/FuncionarioModel.php';
         
-        $model = new FunicionarioModel();
+        $model = new FuncionarioModel();
         
         if(isset($_GET['id']))
             $model = $model->getById((int) $_GET['id']);
@@ -30,6 +30,7 @@ class FuncionarioController
         include 'Model/FuncionarioModel.php'; 
 
         $funcionario = new FuncionarioModel();
+        $funcionario->id= $_POST['id'];
         $funcionario->nome = $_POST['nome'];
         $funcionario->rg = $_POST['rg'];
         $funcionario->telefone = $_POST['telefone'];
@@ -41,5 +42,15 @@ class FuncionarioController
 
         header("Location: /funcionarios"); // redirecionando o usuário para outra rota.
     }
+
+    public static function delete() {
+    include 'Model/FuncionarioModel.php';
+
+    $model= new FuncionarioModel;
+    $model-> delete( (int) $_GET['id']);
+
+    }
+
+
 
 }

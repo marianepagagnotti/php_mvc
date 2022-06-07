@@ -19,7 +19,7 @@ public function save()
             
             $dao->insert($this);
         } else {
-            
+            $dao->update($this);
         }
     }
 
@@ -51,7 +51,14 @@ public function save()
     
     }
 
+    public function delete(int $id) {
+        include 'DAO/Categoria_produtoDAO.php';
+        
+        $dao = new Categoria_produtoDAO();
 
+        $dao->delete( (int) $id);
+        header("Location: /categorias");
+    }
 
 
 }

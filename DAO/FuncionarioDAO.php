@@ -24,7 +24,7 @@ class FuncionarioDAO
                 VALUES (?,?,?,?,?)";
 
         $stmt = $this->conexao->prepare($sql);
-        
+       
         $stmt->bindValue(1, $model->nome);
         $stmt->bindValue(2, $model->rg);
         $stmt->bindValue(3, $model->telefone);

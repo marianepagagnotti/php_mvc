@@ -24,7 +24,12 @@ switch($uri_parse)
     case '/pessoa/save':
         PessoaController::save();
     break;
-
+    
+    case '/pessoa/delete':
+        PessoaController::delete();
+    break;
+    
+    
     ## ROTAS PARA PRODUTO
     case '/produto':
         ProdutoController::index();
@@ -38,6 +43,9 @@ switch($uri_parse)
         ProdutoController::save();
     break;
 
+    case '/produto/delete':
+        ProdutoController::delete();
+    break;
     ## ROTAS PARA CATEGORIA DE PRODUTO
     
     case '/categoria/save':
@@ -51,7 +59,10 @@ switch($uri_parse)
     case '/categorias':
         Categoria_produtoController::index();
     break;
-
+    
+    case '/categoria/delete':
+        Categoria_produtoController::delete();
+    break;
 
     ## ROTAS PARA CATEGORIA DE PRODUTO
 
@@ -66,7 +77,10 @@ switch($uri_parse)
    case '/funcionarios':
     FuncionarioController::index();
    break;
-
+   
+   case '/funcionario/delete':
+    FuncionarioController::delete();
+   break;
 
    default:
    echo "erro 404";

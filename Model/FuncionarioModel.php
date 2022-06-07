@@ -7,7 +7,7 @@ class FuncionarioModel
 
     public $rows;
 
-public function save()
+    public function save()
     {
         include 'DAO/FuncionarioDAO.php';
 
@@ -19,7 +19,7 @@ public function save()
             
             $dao->insert($this);
         } else {
-            
+            $dao->update($this);
         }
     }
 
@@ -49,7 +49,14 @@ public function save()
         }
     
     }
+    public function delete(int $id) {
+        include 'DAO/FuncionarioDAO.php';
+        
+        $dao = new FuncionarioDAO();
 
+        $dao->delete( (int) $id);
+        header("Location: /funcionarios");
+    }
 
 
 

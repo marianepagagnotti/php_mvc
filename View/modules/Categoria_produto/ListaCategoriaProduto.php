@@ -6,6 +6,11 @@
 
     <?php foreach($model->rows as $item): ?>
     <tr>
+        
+        <td>
+            <a href="/categoria/delete?id=<?= $item['id'] ?>">x</a>
+        </td>
+    
         <td><?= $item['id'] ?></td>
         
         <td>

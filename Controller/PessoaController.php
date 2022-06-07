@@ -49,6 +49,7 @@ class PessoaController
         // Abaixo cada propriedade do objeto sendo abastecida com os dados informados
         // pelo usuário no formulário (note o envio via POST)
         $pessoa = new PessoaModel();
+        $pessoa->id= $_POST['id'];
         $pessoa->nome = $_POST['nome'];
         $pessoa->rg = $_POST['rg'];
         $pessoa->cpf = $_POST['cpf'];
@@ -61,4 +62,14 @@ class PessoaController
 
         header("Location: /pessoa"); // redirecionando o usuário para outra rota.
     }
+    public static function delete() {
+        include 'Model/PessoaModel.php';
+
+        $model= new PessoaModel;
+        $model-> delete( (int) $_GET['id']);
+
+    }
+
+
+
 }

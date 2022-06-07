@@ -16,7 +16,7 @@ class ProdutoModel
             
             $dao->insert($this);
         } else {
-            
+            $dao->update($this);
         }
     
     }
@@ -47,6 +47,14 @@ class ProdutoModel
         
         }
     
+        public function delete(int $id) {
+            include 'DAO/ProdutoDAO.php';
+            
+            $dao = new ProdutoDAO();
+    
+            $dao->delete( (int) $id);
+            header("Location: /produto");
+        }
     
     
     

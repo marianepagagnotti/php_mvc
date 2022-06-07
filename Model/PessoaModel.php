@@ -28,6 +28,7 @@ class PessoaModel
             $dao->insert($this);
         } else {
             // update
+            $dao->update($this);
         }
     }
 
@@ -57,5 +58,15 @@ class PessoaModel
         }
     
     }
+
+    public function delete(int $id) {
+        include 'DAO/PessoaDAO.php';
+        
+        $dao = new PessoaDAO();
+
+        $dao->delete( (int) $id);
+        header("Location: /pessoa");
+    }
+
 
 }

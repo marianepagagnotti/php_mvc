@@ -48,7 +48,7 @@ class ProdutoDAO
         $stmt->bindValue(1, $model->nome);
         $stmt->bindValue(2, $model->preco);
         $stmt->bindValue(3, $model->descricao);
-        $stmt->bindValue(8, $model->id);
+        $stmt->bindValue(4, $model->id);
         $stmt->execute();
     
     }

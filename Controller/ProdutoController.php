@@ -33,14 +33,9 @@ class ProdutoController
       
       $produto = new ProdutoModel();
 
+      $produto-> id =$_POST['id'];
       $produto->nome = $_POST['nome'];
-
-      $preco = $_POST['preco'];
-      $preco= str_replace(',','.',$preco);
-      $preco=floatval($preco);
-
-      $produto->preco = $preco;
-      
+      $produto -> preco = $_POST['preco'];
       $produto->descricao = $_POST['descricao'];
      
 
@@ -49,4 +44,11 @@ class ProdutoController
       header("Location: /produto"); // redirecionando o usuário para outra rota.
     }
     
+    public static function delete() {
+      include 'Model/ProdutoModel.php';
+
+      $model= new ProdutoModel;
+      $model-> delete( (int) $_GET['id']);
+
+  } 
 }

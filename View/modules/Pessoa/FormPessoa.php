@@ -12,6 +12,8 @@
 <body>
     <form action="/pessoa/save" method="post">
         <fieldset>
+            
+            <input name="id" value= "<?= $model-> id ?>" type="hidden">
             <legend>Cadastro de Pessoa</legend>
             <label for="nome">Nome:</label>
             <input name="nome" id="nome" value= "<?= $model-> nome ?>" type="text" />

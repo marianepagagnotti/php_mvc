@@ -12,15 +12,18 @@
 <body>
     <form action="/produto/save" method="post">
         <fieldset>
+            
+            <input name="id" value= "<?= $model-> id ?>" type="hidden">
+            
             <legend>Cadastro de Produto</legend>
             <label for="nome">Nome:</label>
-            <input name="nome" id="nome" type="text" />
+            <input name="nome" value= "<?= $model-> nome ?>" id="nome" type="text" />
 
             <label for="preco">Preço:</label>
-            <input name="preco" id="preco" type="number" />
+            <input name="preco" value= "<?= $model-> preco ?>" id="preco" type="number" />
 
             <label for="descricao">Descrição :</label>
-            <input name="descricao" id="descricao" type="text" />
+            <input name="descricao" value= "<?= $model-> descricao?>" id="descricao" type="text" />
 
            <button type="submit">Enviar</button>
 

@@ -12,21 +12,23 @@
 <body>
     <form action="/funcionario/save" method="post">
         <fieldset>
+            
+            <input name="id" value= "<?= $model-> id ?>" type="hidden">
             <legend>Cadastro de Funcionario</legend>
             <label for="nome">Nome:</label>
-            <input name="nome" id="nome" type="text" />
+            <input name="nome" value= "<?= $model-> nome ?>" id="nome" type="text" />
 
             <label for="rg">RG:</label>
-            <input name="rg" id="rg" type="text" />
+            <input name="rg" value= "<?= $model-> rg ?>" id="rg" type="text" />
 
             <label for="data_nascimento">Data Nascimento:</label>
-            <input name="data_nascimento" id="data_nascimento" type="date" />
+            <input name="data_nascimento" value= "<?= $model-> data_nascimento ?>" id="data_nascimento" type="date" />
 
             <label for="email">E-mail:</label>
-            <input name="email" id="email" type="email" />
+            <input name="email" value= "<?= $model-> email ?>" id="email" type="email" />
 
             <label for="telefone">Telefone:</label>
-            <input name="telefone" id="telefone" type="numer" />
+            <input name="telefone" value= "<?= $model-> telefone?>" id="telefone" type="numer" />
 
            
 

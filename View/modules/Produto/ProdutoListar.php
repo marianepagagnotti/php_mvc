@@ -7,6 +7,11 @@
 
     <?php foreach($model->rows as $item): ?>
     <tr>
+       
+        <td>
+            <a href="/produto/delete?id=<?= $item['id'] ?>">x</a>
+        </td>
+        
         <td><?= $item['id'] ?></td>
         <td>
             <a href="/produto/form?id=<?= $item['id'] ?>"><?= $item['nome'] ?></a>
