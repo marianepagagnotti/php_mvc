@@ -42,7 +42,7 @@ class FuncionarioController extends Controller
         $funcionario->nome = $_POST['nome'];
         $funcionario->rg = $_POST['rg'];
         $funcionario->cpf = $_POST['cpf'];
-        $funcionario->data_nascimento = $_POST['data_nascimento'];
+        $funcionario->data_nasc = $_POST['data_nasc'];
         $funcionario->email = $_POST['email'];
         $funcionario->telefone = $_POST['telefone'];
         $funcionario->endereco = $_POST['endereco'];

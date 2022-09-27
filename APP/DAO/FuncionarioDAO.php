@@ -22,8 +22,8 @@ class FuncionarioDAO extends DAO
     {
           
         $sql = "INSERT INTO funcionario 
-                (nome, rg, telefone, data_nasc, email)
-                VALUES (?,?,?,?,?)";
+                (nome, rg, telefone, data_nasc, email, cpf)
+                VALUES (?,?,?,?,?,?)";
 
         $stmt = $this->conexao->prepare($sql);
        
@@ -32,7 +32,7 @@ class FuncionarioDAO extends DAO
         $stmt->bindValue(3, $model->telefone);
         $stmt->bindValue(4, $model->data_nasc);
         $stmt->bindValue(5, $model->email);
-       
+        $stmt->bindValue(6, $model->cpf);
        
        
         $stmt->execute();      
@@ -40,7 +40,7 @@ class FuncionarioDAO extends DAO
 
     public function update(FuncionarioModel $model)
     {
-        $sql = "UPDATE funcionario SET nome= ?, rg= ?, telefone= ?, data_nasc= ?, email= ?
+        $sql = "UPDATE funcionario SET nome= ?, rg= ?, telefone= ?, data_nasc= ?, email= ?, cpf=?
                 WHERE id= ?";
         $stmt = $this->conexao->prepare($sql);
         $stmt->bindValue(1, $model->nome);
@@ -48,7 +48,8 @@ class FuncionarioDAO extends DAO
         $stmt->bindValue(3, $model->telefone);
         $stmt->bindValue(4, $model->data_nasc);
         $stmt->bindValue(5, $model->email);
-        $stmt->bindValue(6, $model->id);
+        $stmt->bindValue(6, $model->cpf);
+        $stmt->bindValue(7, $model->id);
         $stmt->execute();
     
     }

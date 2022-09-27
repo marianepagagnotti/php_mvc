@@ -29,8 +29,8 @@
             <label for="cpf">CPF:</label>
             <input name="cpf" id="cpf" value= "<?= $model-> cpf ?>" type="number" />
 
-            <label for="data_nascimento">Data Nascimento:</label>
-            <input name="data_nascimento" id="data_nascimento" value= "<?= $model-> data_nascimento ?>" type="date" />
+            <label for="data_nasc">Data Nascimento:</label>
+            <input name="data_nasc" id="data_nasc" value= "<?= $model-> data_nasc ?>" type="date" />
 
             <label for="email">E-mail:</label>
             <input name="email" id="email" value= "<?= $model-> email ?>" type="email" />

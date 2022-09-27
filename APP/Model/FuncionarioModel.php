@@ -8,7 +8,7 @@ class FuncionarioModel extends Model
 {
 
     public $id, $nome, $rg, $cpf;
-    public $data_nascimento, $email;
+    public $data_nasc, $email;
     public $telefone, $endereco;
 
     public $rows;

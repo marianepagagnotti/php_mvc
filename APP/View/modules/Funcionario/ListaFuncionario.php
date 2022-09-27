@@ -13,13 +13,13 @@
     <?php foreach($model->rows as $item): ?>
     <tr>
         <td>
-            <a href="/pessoa/delete?id=<?= $item->id ?>">x
+            <a href="/funcionario/delete?id=<?= $item->id ?>">x
         
             <td><?= $item->id ?></td>
         </td>
 
         <td>
-            <a href="/pessoa/form?id=<?= $item->id ?>"><?= $item->nome?>
+            <a href="/funcionario/form?id=<?= $item->id ?>"><?= $item->nome?>
         </td>
 
         <td><?= $item->rg ?></td>
