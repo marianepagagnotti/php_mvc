@@ -7,7 +7,7 @@ use APP\DAO\FuncionarioDAO;
 class FuncionarioModel extends Model
 {
 
-    public $id, $nome, $rg, $cpf;
+    public $id, $nome, $rg;
     public $data_nasc, $email;
     public $telefone, $endereco;
 

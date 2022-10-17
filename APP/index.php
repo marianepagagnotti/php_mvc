@@ -1,10 +1,13 @@
 <?php
 
+session_start();
+
 $uri_parse = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 use APP\Controller\FuncionarioController;
 use APP\Controller\PessoaController;
 use APP\Controller\ProdutoController;
+use APP\Controller\LoginController;
 
 include 'autoload.php';
 include 'config.php';
@@ -14,6 +17,18 @@ include 'config.php';
 
 switch($uri_parse)
 {
+    case '/login':
+        LoginController::index();
+    break;
+
+    case '/login/auth':
+        LoginController::auth();
+    break;
+    
+    case '/logout':
+        LoginController::logout();
+    break;
+    
     case '/pessoa':
         PessoaController::index();
     break;

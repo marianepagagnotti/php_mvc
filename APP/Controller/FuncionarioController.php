@@ -41,7 +41,6 @@ class FuncionarioController extends Controller
         $funcionario = new FuncionarioModel();
         $funcionario->nome = $_POST['nome'];
         $funcionario->rg = $_POST['rg'];
-        $funcionario->cpf = $_POST['cpf'];
         $funcionario->data_nasc = $_POST['data_nasc'];
         $funcionario->email = $_POST['email'];
         $funcionario->telefone = $_POST['telefone'];
@@ -58,4 +57,6 @@ class FuncionarioController extends Controller
         $model = new FuncionarioModel();
         $model-> delete( (int) $_GET['id']);
     }
+    
+    
 }
