@@ -16,7 +16,7 @@ class PessoaController extends Controller
 
         //include 'View/modules/Pessoa/ListaPessoas.php';
         
-        parent :: render('Pessoa/ListaPessoas', $model);
+        parent::render('Pessoa/ListaPessoas', $model);
     }
 
 

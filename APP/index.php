@@ -8,6 +8,7 @@ use APP\Controller\FuncionarioController;
 use APP\Controller\PessoaController;
 use APP\Controller\ProdutoController;
 use APP\Controller\LoginController;
+use APP\Controller\UsuarioController;
 
 include 'autoload.php';
 include 'config.php';
@@ -72,7 +73,19 @@ switch($uri_parse)
     case '/funcionario/save':
         FuncionarioController::save();
  
+    case '/usuario':
+        UsuarioController::index();
+    break;
+    
+    case '/usuario/form':
+        UsuarioController::form();
+    break;
+    
+    case '/usuario/save':
+        UsuarioController::save();
+    break;    
+    
     default:
-        echo "erro";
+        header("Location: /usuario");
     break;
 }
