@@ -26,9 +26,9 @@ class LoginController extends Controller
 
         if ($usuario_logado !== null) {
 
-            $_SESSION['usuario_logado'] = $usuario_logado;
+            $_SESSION['usuario_logado'] = json_encode($usuario_logado);
 
-            header("Location: /");
+            header("Location: /home");
 
         } else
             header("Location: /login?erro=true");

@@ -29,7 +29,19 @@ switch($uri_parse)
     case '/logout':
         LoginController::logout();
     break;
-    
+
+    case '/home':
+        include 'View/modules/Home/Home.php';
+        break;
+
+    case '/usuario/trocar':
+        UsuarioController::trocar();
+        break;
+
+    case '/trocar/auth':
+        UsuarioController::trocarAuth();
+        break;
+
     case '/pessoa':
         PessoaController::index();
     break;
@@ -86,6 +98,6 @@ switch($uri_parse)
     break;    
     
     default:
-        header("Location: /usuario");
+        header("Location: /home");
     break;
 }

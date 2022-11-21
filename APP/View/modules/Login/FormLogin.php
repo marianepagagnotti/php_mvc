@@ -8,3 +8,7 @@
     
     <button type="submit">Entrar</button>
 </form>
+
+<form action="/usuario/form" >
+    <button type="submit">Cadastre-se</button>
+</form>
