@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCarrinhoDeCompras.View.EditarProduto"
+             Title="{Binding descricao}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Salvar" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text = "Descrição: "/>
+            <Entry x:Name="txt_desc" Text="{Binding descricao}"/>
+
+            <Label Text = "Quantidade: "/>
+            <Entry x:Name="txt_quant" Text="{Binding quantidade}"/>
+
+            <Label Text ="Preço: "/>
+            <Entry x:Name="txt_preco" Text="{Binding preco}"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
